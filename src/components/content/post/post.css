@@ -1,0 +1,148 @@
+.post__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.post__avatar img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.post__name a {
+    color: #444444;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.post__name a:hover {
+    color: #dc3545;
+}
+
+.post__time {
+    color: #5d5d5d;
+    font-size: 14px;
+}
+
+.post__settings {
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.post__settings span {
+    width: 20px;
+    height: 1px;
+    display: block;
+    background-color: #ccc;
+    margin-bottom: 4px;
+    transition: 0.4s;
+}
+
+.post__settings__menu {
+    right: 0;
+    top: 100%;
+    width: 200px;
+    background-color: #fff;
+    position: absolute;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 15px 0 rgba(51, 51, 51, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    transform: translateY(20px);
+}
+
+.post__settings li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.post__settings li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: none;
+}
+
+.post__settings:hover .post__settings__menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px);
+}
+
+.post__settings:hover span {
+    background-color: #dc4734;
+}
+
+.post__settings__menu li {
+    color: #444444;
+    transition: all .4s;
+}
+
+.post__settings__menu li:hover {
+    color: #dc4734;
+}
+
+.post__content {
+
+}
+
+.post__content p {
+    line-height: 22px;
+    color: #444444;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.post__meta {
+    display: flex;
+    padding: 0 12px;
+}
+
+.post__meta button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    box-shadow: none;
+    transition: 0.4s;
+    background-color: transparent;
+}
+
+.post__meta button i {
+    font-size: 25px;
+    color: #333333;
+    vertical-align: middle;
+    margin-right: 5px;
+    transition: 0.4s;
+}
+
+.post__meta span {
+    font-size: 13px;
+    color: #666666;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.post__meta-share {
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.post__meta-like:hover i,
+.post__meta-like:hover span,
+.post__meta-comment:hover i,
+.post__meta-comment:hover span,
+.post__meta-share:hover i,
+.post__meta-share:hover span {
+    color: #dc4734;
+}

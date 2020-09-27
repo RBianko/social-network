@@ -1,0 +1,58 @@
+.messages__list__item {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.messages__list__item.active {
+    border: 2px solid #dc3545;
+    background-color: #ffffff;
+}
+
+.messages__list__item.active .messages__list__item-name{
+    color: #dc3545;
+}
+
+.messages__list__item-avatar {
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.messages__list__item-info {
+    display: flex;
+    align-items: center;
+}
+
+.messages__list__item-name {
+    width: 150px;
+}
+
+.messages__list__item-name {
+    color: #444444;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.messages__list__item:hover .messages__list__item-name {
+    color: #dc3545;
+}
+
+.messages__list__item-msg-count {
+    text-align: center;
+    width: 30px;
+    padding: 5px;
+    color: #fff;
+    background-color: #dc3545;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 900;
+    text-decoration: none;
+}
