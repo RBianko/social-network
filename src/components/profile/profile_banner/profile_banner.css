@@ -1,17 +1,17 @@
-.profileBanner {
+.profile__banner {
     padding: 0;
 }
 
-.profileBanner__background {
+.profile__banner__background {
     position: relative;
 }
 
-.profileBanner__background > img {
+.profile__banner__background > img {
     width: 100%;
     height: auto;
 }
 
-.profileBanner__avatar {
+.profile__banner__avatar {
     width: 80px;
     height: 80px;
     display: block;
@@ -24,13 +24,13 @@
     margin: auto;
 }
 
-.profileBanner__info {
+.profile__banner__info {
     text-align: center;
     padding: 30px;
     margin-top: 20px;
 }
 
-.profileBanner__info-title a {
+.profile__banner__info-title a {
     display: block;
     color: #444444;
     font-weight: bold;
@@ -39,11 +39,11 @@
     margin-bottom: 5px;
 }
 
-.profileBanner__info-title a:hover {
+.profile__banner__info-title a:hover {
     color: #dc3545;
 }
 
-.profileBanner__info-disc p {
+.profile__banner__info-disc p {
     text-align: center;
     line-height: 22px;
     color: #444444;

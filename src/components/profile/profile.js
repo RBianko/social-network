@@ -1,20 +1,29 @@
 import React from "react";
-import './content.css';
-import Post from "./post/post";
+import './profile.css';
 
-const Content = () => {
+import ProfilePostForm from "./profile_post_form/profile_post_form";
+import ProfileBanner from "./profile_banner/profile_banner";
+import SideBar from "../side_notifications/side_notifications";
+import ProfilePosts from "./profile_posts/profile_posts";
+
+const Profile = () => {
     return (
-        <div className="content__inner">
-            <Post
-                message="Hello React"
-                likesCount="3221"
-            />
-            <Post
-                message="Welcome!"
-                likesCount="1312"
-            />
+        <div className="content__wrapper">
+            <div className="left__content">
+                <ProfileBanner/>
+                {/*left__content*/}
+            </div>
+            <div className="main__content">
+                {/*main__content*/}
+                <ProfilePostForm/>
+                <ProfilePosts />
+            </div>
+            <div className="right__content">
+                {/*right__content*/}
+                <SideBar />
+            </div>
         </div>
     )
 }
 
-export default Content;
+export default Profile;

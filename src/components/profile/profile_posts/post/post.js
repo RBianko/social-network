@@ -9,7 +9,7 @@ const Post = (props) => {
                     <a href="#"><img src="https://demo.hasthemes.com/adda-preview/adda/assets/images/profile/profile-midle-1.jpg" alt=""/></a>
                 </div>
                 <div className="post__name">
-                    <a href="#">Bianko Raman</a><br/>
+                    <a href="#">Raman Bianko</a><br/>
                     <span className="post__time">20 min ago</span>
                 </div>
                 <div className="post__settings">

@@ -1,22 +1,22 @@
 import React from "react";
 import './profile_banner.css';
 
-const Profile = () => {
+const ProfileBanner = () => {
     return (
-        <div className="profileBanner card">
-            <div className="profileBanner__background">
+        <div className="profile__banner card">
+            <div className="profile__banner__background">
                 <img src="https://demo.hasthemes.com/adda-preview/adda/assets/images/banner/banner-small.jpg" alt=""/>
-                <div className="profileBanner__avatar">
+                <div className="profile__banner__avatar">
                     <a href="#"><img
                         src="https://demo.hasthemes.com/adda-preview/adda/assets/images/profile/profile-midle-1.jpg"
-                        alt="" className="profileBanner__image"/></a>
+                        alt="" className="profile__banner__image"/></a>
                 </div>
             </div>
-            <div className="profileBanner__info">
-                <div className="profileBanner__info-title">
-                    <a href="#">Bianko Raman</a>
+            <div className="profile__banner__info">
+                <div className="profile__banner__info-title">
+                    <a href="#">Raman Bianko</a>
                 </div>
-                <div className="profileBanner__info-disc">
+                <div className="profile__banner__info-disc">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, porro!</p>
                 </div>
             </div>
@@ -24,4 +24,4 @@ const Profile = () => {
     )
 }
 
-export default Profile;
+export default ProfileBanner;

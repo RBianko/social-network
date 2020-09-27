@@ -1,21 +1,32 @@
 import React from "react";
 import './message_content.css';
+import Message from "./message/message";
 
 const MessageContent = (props) => {
+
+    let messagesData = [
+        {
+            message: "Let's go!!"
+        },
+        {
+            message: "Ok we can try, but if you fail i cant help you u know what i mean.."
+        },
+        {
+            message: "Any one can join us if you want"
+        }
+    ]
+
+    let messages = messagesData
+        .map( message => (
+            <Message
+                message={message.message}
+                imgId={props.imgId}
+            />
+        ))
+
     return (
         <div className="card message__content">
-            <div className="message__item">
-                <div className="message__avatar">
-                    <a href="#"><img src="https://demo.hasthemes.com/adda-preview/adda/assets/images/profile/profile-midle-1.jpg" alt=""/></a>
-                </div>
-                <div className="message__inner">
-                    <div className="message__name-time">
-                        Raman
-                        <span>1:30 pm</span>
-                    </div>
-                    <p>Hello how are you</p>
-                </div>
-            </div>
+            {messages}
             <div className="card message__form">
                 <div className="message__form__form">
                     <form>
