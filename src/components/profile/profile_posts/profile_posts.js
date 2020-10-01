@@ -5,27 +5,18 @@ import Post from "./post/post";
 
 const ProfilePosts = (props) => {
 
-    let postsData = [
-        {
-            message: "Hello React!",
-            likesCount: 3221
-        },
-        {
-            message: "I'm your fan!",
-            likesCount: 1289
-        },
-        {
-            message: "Keep going ON!!!",
-            likesCount: 4221
-        }
-    ]
+    let postsItems = props.postsData
+        .map( postItem =>
+            <Post
+                message={postItem.message}
+                likesCount={postItem.likesCount}
+            />
+        )
 
     return (
-      <div className="posts_inner">
-          <Post message = {postsData[0].message} likesCount = {postsData[0].likesCount} />
-          <Post message = {postsData[1].message} likesCount = {postsData[1].likesCount}/>
-          <Post message = {postsData[2].message} likesCount = {postsData[2].likesCount}/>
-      </div>
+        <div className="posts_inner">
+            {postsItems}
+        </div>
     );
 }
 

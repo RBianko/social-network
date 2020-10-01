@@ -6,7 +6,8 @@ import ProfileBanner from "./profile_banner/profile_banner";
 import SideBar from "../side_notifications/side_notifications";
 import ProfilePosts from "./profile_posts/profile_posts";
 
-const Profile = () => {
+const Profile = (props) => {
+
     return (
         <div className="content__wrapper">
             <div className="left__content">
@@ -16,7 +17,7 @@ const Profile = () => {
             <div className="main__content">
                 {/*main__content*/}
                 <ProfilePostForm/>
-                <ProfilePosts />
+                <ProfilePosts postsData={props.postsData} />
             </div>
             <div className="right__content">
                 {/*right__content*/}

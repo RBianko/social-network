@@ -4,19 +4,7 @@ import Message from "./message/message";
 
 const MessageContent = (props) => {
 
-    let messagesData = [
-        {
-            message: "Let's go!!"
-        },
-        {
-            message: "Ok we can try, but if you fail i cant help you u know what i mean.."
-        },
-        {
-            message: "Any one can join us if you want"
-        }
-    ]
-
-    let messages = messagesData
+    let messagesList = props.messagesData
         .map( message => (
             <Message
                 message={message.message}
@@ -26,7 +14,7 @@ const MessageContent = (props) => {
 
     return (
         <div className="card message__content">
-            {messages}
+            {messagesList}
             <div className="card message__form">
                 <div className="message__form__form">
                     <form>

@@ -17,9 +17,12 @@ const MessagesListItem = (props) => {
                     <div className="messages__list__item-name">
                         {props.name}
                     </div>
-                    <div className="messages__list__item-msg-count">
-                        {props.msgCout}
-                    </div>
+                    {props.msgCount > 0 ?
+                        <div className="messages__list__item-msg-count">
+                            {props.msgCount}
+                        </div>
+                        : null}
+
                 </div>
             </div>
         </NavLink>

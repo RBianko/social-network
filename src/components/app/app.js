@@ -6,13 +6,17 @@ import Profile from "../profile/profile";
 import Messages from "../messages/messages";
 import {Route, BrowserRouter} from "react-router-dom";
 
-function App() {
+function App(props) {
     return (
         <BrowserRouter>
-            <Header />
+            <Header/>
             <div className="wrapper">
-                <Route path='/messages' component={Messages}/>
-                <Route path='/home' component={Profile} />
+                <Route path='/messages' render={() =>
+                    <Messages messagesData={props.messagesData} massagesListData={props.massagesListData} />
+                }/>
+                <Route path='/home' render={() =>
+                    <Profile postsData={props.postsData} />
+                }/>
             </div>
         </BrowserRouter>
     );
