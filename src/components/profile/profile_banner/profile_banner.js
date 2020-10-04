@@ -14,7 +14,7 @@ const ProfileBanner = () => {
             </div>
             <div className="profile__banner__info">
                 <div className="profile__banner__info-title">
-                    <a href="#">Raman Bianko</a>
+                    <a href="#">Roman Bianko</a>
                 </div>
                 <div className="profile__banner__info-disc">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, porro!</p>

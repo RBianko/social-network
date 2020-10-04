@@ -14,7 +14,7 @@ const Header = () => {
                     </ul>
                 </nav>
                 <div className="logo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Tumblr_static_memrise_icon_tumblr%281%29.png" alt="logo"/>
+                    <img src="https://i.pinimg.com/originals/dd/84/b8/dd84b8539d9c755540db2a1491790cec.png" alt='logo'/>
                 </div>
                 <div className="search">
                     <form action="">

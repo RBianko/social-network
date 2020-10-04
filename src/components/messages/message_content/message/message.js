@@ -12,7 +12,7 @@ const Message = (props) => {
             </div>
             <div className="message__inner">
                 <div className="message__name-time">
-                    Raman
+                    Roman
                     <span>1:30 pm</span>
                 </div>
                 <p>{props.message}</p>

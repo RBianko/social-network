@@ -4,21 +4,27 @@ import './app.css';
 import Header from "../header/header";
 import Profile from "../profile/profile";
 import Messages from "../messages/messages";
-import {Route, BrowserRouter} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 function App(props) {
     return (
-        <BrowserRouter>
+        <div className="app_wrapper">
             <Header/>
             <div className="wrapper">
                 <Route path='/messages' render={() =>
-                    <Messages messagesData={props.messagesData} massagesListData={props.massagesListData} />
+                    <Messages
+                        state={props.state.messagesPage}
+                    />
                 }/>
                 <Route path='/home' render={() =>
-                    <Profile postsData={props.postsData} />
+                    <Profile
+                        profilePage={props.state.profilePage}
+                        onPostChange={props.onPostChange}
+                        addPost={props.addPost}
+                    />
                 }/>
             </div>
-        </BrowserRouter>
+        </div>
     );
 }
 

@@ -4,9 +4,17 @@ import Message from "./message/message";
 
 const MessageContent = (props) => {
 
+    let newMessageForm = React.createRef();
+
+    const sendMessage = () => {
+        let text = newMessageForm.current.value;
+        alert(text)
+    }
+
     let messagesList = props.messagesData
         .map( message => (
             <Message
+                key={message.id}
                 message={message.message}
                 imgId={props.imgId}
             />
@@ -18,8 +26,8 @@ const MessageContent = (props) => {
             <div className="card message__form">
                 <div className="message__form__form">
                     <form>
-                    <textarea name="newMessage" placeholder="Type message"/>
-                        <button className="message__form__form-btn">send</button>
+                    <textarea ref={newMessageForm} placeholder="Type message"/>
+                        <button onClick={ sendMessage } className="message__form__form-btn">send</button>
                     </form>
                 </div>
             </div>

@@ -43,7 +43,8 @@
 }
 
 .logo img {
-    width: 60px;
+    margin-top: -12px;
+    width: 110px;
 }
 
 .search {

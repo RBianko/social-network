@@ -6,7 +6,7 @@ import SideBar from "../side_notifications/side_notifications";
 
 const Messages = (props) => {
 
-    let massagesListItems = props.massagesListData
+    let massagesListItems = props.state.massagesListData
         .map( messageItem =>
             <MessagesListItem
                 name={messageItem.name}
@@ -30,7 +30,10 @@ const Messages = (props) => {
                 </div>
             </div>
             <div className="main__content">
-                <MessageContent messagesData={props.messagesData} imgId={props.massagesListData[0].imgId} />
+                <MessageContent
+                    messagesData={props.state.messagesData}
+                    imgId={props.state.massagesListData[0].imgId}
+                />
             </div>
             <div className="right__content">
                 <SideBar/>
