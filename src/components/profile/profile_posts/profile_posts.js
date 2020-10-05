@@ -7,7 +7,7 @@ const ProfilePosts = (props) => {
 
     let postsItems = props.postsData
 
-        .map( postItem =>
+        .map(postItem =>
             <Post
                 key={postItem.id}
                 message={postItem.message}
@@ -15,7 +15,7 @@ const ProfilePosts = (props) => {
             />
         )
     return (
-        <div className="posts_inner">
+        <div className="posts_content">
             {postsItems}
         </div>
     );

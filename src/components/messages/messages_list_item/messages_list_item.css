@@ -39,6 +39,12 @@
     transition: all .5s;
 }
 
+.messages__list__item-name span {
+    font-size: 11px;
+    color: forestgreen;
+    font-weight: 700;
+}
+
 .messages__list__item:hover .messages__list__item-name {
     color: #dc3545;
 }

@@ -15,7 +15,8 @@ const MessagesListItem = (props) => {
                 </div>
                 <div className="messages__list__item-info">
                     <div className="messages__list__item-name">
-                        {props.name}
+                        {props.name} <br/>
+                        <span className="online">Online</span>
                     </div>
                     {props.msgCount > 0 ?
                         <div className="messages__list__item-msg-count">

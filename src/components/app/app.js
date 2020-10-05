@@ -6,6 +6,7 @@ import Profile from "../profile/profile";
 import Messages from "../messages/messages";
 import {Route} from "react-router-dom";
 
+
 function App(props) {
     return (
         <div className="app_wrapper">
@@ -13,14 +14,14 @@ function App(props) {
             <div className="wrapper">
                 <Route path='/messages' render={() =>
                     <Messages
-                        state={props.state.messagesPage}
+                        messagesPage={props.state.messagesPage}
+                        dispatch={props.dispatch}
                     />
                 }/>
                 <Route path='/home' render={() =>
                     <Profile
                         profilePage={props.state.profilePage}
-                        onPostChange={props.onPostChange}
-                        addPost={props.addPost}
+                        dispatch={props.dispatch}
                     />
                 }/>
             </div>

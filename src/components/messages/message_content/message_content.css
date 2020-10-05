@@ -1,18 +1,29 @@
-.message__form {
-    position: absolute;
+.message__container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 85px);
+    max-width: 570px;
+}
+
+.message__content {
+    height: 100%;
+    overflow-y: auto;
     margin-bottom: 0;
-    bottom: 0;
-    left: 0;
+    justify-content: flex-end;
+}
+
+.message__input {
+    position: relative;
     width: 100%;
     padding: 15px;
-    flex-direction: row;
+    margin-bottom: 0;
 }
 
-.message__form__form {
+.message__input__form {
     width: 100%;
 }
 
-.message__form__form textarea {
+.message__input__form textarea {
     width: 100%;
     resize: none;
     outline: none;
@@ -28,7 +39,7 @@
     transition: all 0.4s ease;
 }
 
-.message__form__form-btn {
+.message__input__form-btn {
     top: 50%;
     right: 19px;
     font-size: 12px;
@@ -48,7 +59,7 @@
     outline: none;
 }
 
-.message__form__form-btn:hover {
+.message__input__form-btn:hover {
     background-color: #dc4734;
     color: #fff;
 }
