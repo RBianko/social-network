@@ -1,29 +1,22 @@
 import React from "react";
 import './message_content.css';
 import Message from "./message/message";
+import {addMessageActionCreator, onMessageChangeActionCreator} from "../../../redux/messages_reducer";
 
 const MessageContent = (props) => {
 
     let newMessageForm = React.createRef();
 
     const addMessage = () => {
-        let action = {
-            type: 'ADD-MESSAGE'
-        }
-        newMessageForm.current.value && props.dispatch(action)
-        newMessageForm.current.value = ''
+        newMessageForm.current.value && props.dispatch(addMessageActionCreator())
     }
 
     const onMessageChange = () => {
         let text = newMessageForm.current.value
-        let action = {
-            type: 'ON-MESSAGE-CHANGE',
-            messageText: text
-        }
-        props.dispatch(action)
+        props.dispatch(onMessageChangeActionCreator(text))
     }
 
-    let messagesList = props.messagesData
+    let messagesList = props.messagesPage.messagesData
         .map(message => (
             <Message
                 key={message.id}
@@ -42,7 +35,7 @@ const MessageContent = (props) => {
                         <textarea
                             ref={newMessageForm}
                             onChange={onMessageChange}
-                            value={props.newMessageText}
+                            value={props.messagesPage.newMessageText}
                             placeholder="Type message"
                         />
                     <button

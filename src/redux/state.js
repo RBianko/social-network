@@ -1,3 +1,6 @@
+import messagesReducer from "./messages_reducer";
+import profileReducer from "./profile_reducer";
+
 let store = {
     _state: {
         profilePage: {
@@ -41,7 +44,7 @@ let store = {
                 },
                 {
                     id: 4,
-                    name: "Lia Grey",
+                    name: "Lea Grey",
                     imgId: 2
                 },
                 {
@@ -77,51 +80,11 @@ let store = {
         this._callSubscriber = observer;
     },
 
-    _addPost() {
-        let newPost = {
-            id: 4,
-            message: this._state.profilePage.newPostText,
-            likesCount: 0
-        }
-        this._state.profilePage.postsData.push(newPost)
-        this._state.profilePage.newPostText = ''
-        this._callSubscriber()
-    },
-    _onPostChange(postText) {
-        this._state.profilePage.newPostText = postText
-        this._callSubscriber()
-    },
-    _addMessage() {
-        let newMessage = {
-            id: 4,
-            message: this._state.messagesPage.newMessageText
-        }
-        this._state.messagesPage.messagesData.push(newMessage)
-        this._state.messagesPage.newMessageText = ''
-        this._callSubscriber()
-    },
-    _onMessageChange(messageText) {
-        this._state.messagesPage.newMessageText = messageText
-        this._callSubscriber()
-    },
-
     dispatch(action) {
-        switch (action.type) {
-            case 'ADD-POST':
-                this._addPost()
-                break
-            case 'ON-POST-CHANGE':
-                this._onPostChange(action.postText)
-                break
-            case 'ADD-MESSAGE':
-                this._addMessage()
-                break
-            case 'ON-MESSAGE-CHANGE':
-                this._onMessageChange(action.messageText)
-                break
-            default:
-                break
-        }
+        this._state.messagesPage = messagesReducer(this._state.messagesPage, action)
+        this._state.profilePage = profileReducer(this._state.profilePage, action)
+
+        this._callSubscriber(this._state)
     }
 }
 

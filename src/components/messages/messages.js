@@ -31,7 +31,7 @@ const Messages = (props) => {
             </div>
             <div className="main__content">
                 <MessageContent
-                    messagesData={props.messagesPage.messagesData}
+                    messagesPage={props.messagesPage}
                     dispatch={props.dispatch}
                     imgId={props.messagesPage.massagesListData[0].imgId}
                 />

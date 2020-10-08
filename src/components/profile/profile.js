@@ -19,7 +19,7 @@ const Profile = (props) => {
             <div className="main__content">
                 {/*main__content*/}
                 <ProfilePostForm
-                    onPostChange={props.onPostChange}
+                    newPostText={props.profilePage.newPostText}
                     dispatch={props.dispatch}
                 />
                 <ProfilePosts
