@@ -1,7 +1,28 @@
 const ADD_POST = 'ADD_POST'
 const ON_POST_CHANGE = 'ON-POST-CHANGE'
 
-const profileReducer = (state, action) => {
+let initialState =   {
+    postsData: [
+        {
+            id: 1,
+            message: "Hello React!",
+            likesCount: 3221
+        },
+        {
+            id: 2,
+            message: "I'm your fan!",
+            likesCount: 1289
+        },
+        {
+            id: 3,
+            message: "Keep going ON!!!",
+            likesCount: 4221
+        }
+    ],
+    newPostText: ''
+}
+
+const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST:
             let newPost = {
@@ -9,7 +30,7 @@ const profileReducer = (state, action) => {
                 message: state.newPostText,
                 likesCount: 0
             }
-            state.postsData.push(newPost)
+            state.newPostText && state.postsData.push(newPost)
             state.newPostText = ''
             return state
 

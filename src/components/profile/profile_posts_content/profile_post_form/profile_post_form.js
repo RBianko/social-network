@@ -1,18 +1,17 @@
 import React from "react"
 import './profile_post_form.css'
-import {addPostActionCreator, onPostChangeActionCreator} from '../../../redux/profile_reducer';
 
 const ProfilePostForm = (props) => {
 
     let newPostForm = React.createRef()
 
     const addPost = () => {
-        newPostForm.current.value && props.dispatch(addPostActionCreator())
+        props.addPost()
     }
 
     const onPostChange = () => {
         let text = newPostForm.current.value
-        props.dispatch(onPostChangeActionCreator(text))
+        props.onPostChange(text)
     }
 
     return (

@@ -3,26 +3,19 @@ import './app.css';
 
 import Header from "../header/header";
 import Profile from "../profile/profile";
-import Messages from "../messages/messages";
+import MessagesContainer from "../messages/messages_container";
 import {Route} from "react-router-dom";
 
-
-function App(props) {
+function App() {
     return (
         <div className="app_wrapper">
             <Header/>
             <div className="wrapper">
                 <Route path='/messages' render={() =>
-                    <Messages
-                        messagesPage={props.state.messagesPage}
-                        dispatch={props.dispatch}
-                    />
+                    <MessagesContainer />
                 }/>
                 <Route path='/home' render={() =>
-                    <Profile
-                        profilePage={props.state.profilePage}
-                        dispatch={props.dispatch}
-                    />
+                    <Profile />
                 }/>
             </div>
         </div>

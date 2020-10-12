@@ -1,13 +1,12 @@
 import React from "react";
 import './profile.css';
 
-import ProfilePostForm from "./profile_post_form/profile_post_form";
 import ProfileBanner from "./profile_banner/profile_banner";
 import SideBar from "../side_notifications/side_notifications";
-import ProfilePosts from "./profile_posts/profile_posts";
 import ProfileFriends from "./profile_friends/profile_friends";
+import ProfilePostsContainer from "./profile_posts_content/profile_post_container";
 
-const Profile = (props) => {
+const Profile = () => {
 
     return (
         <div className="content__wrapper">
@@ -18,13 +17,7 @@ const Profile = (props) => {
             </div>
             <div className="main__content">
                 {/*main__content*/}
-                <ProfilePostForm
-                    newPostText={props.profilePage.newPostText}
-                    dispatch={props.dispatch}
-                />
-                <ProfilePosts
-                    postsData={props.profilePage.postsData}
-                />
+                <ProfilePostsContainer />
             </div>
             <div className="right__content">
                 {/*right__content*/}
