@@ -1,38 +1,25 @@
-import React from "react";
 import ProfilePostForm from "./profile_post_form/profile_post_form";
 import ProfilePosts from "./profile_posts/profile_posts";
 import {addPostActionCreator, onPostChangeActionCreator} from "../../../redux/profile_reducer";
-import StoreContext from "../../../store_context";
+import {connect} from "react-redux";
 
-const ProfilePostsContainer = () => {
-    return (
-        <StoreContext.Consumer>
-            {
-            (store) => {
-                let state = store.getState()
+const mapStateToPropsForm = (state) => ({
+        newPostText: state.profilePage.newPostText
+})
 
-                const addPost = () => {
-                    store.dispatch(addPostActionCreator())
-                }
+const mapStateToProps = (state) => ({
+    postsData: state.profilePage.postsData
+})
 
-                const onPostChange = (text) => {
-                    store.dispatch(onPostChangeActionCreator(text))
-                }
+const mapDispatchToProps = (dispatch) => ({
+    addPost: () => {
+        dispatch(addPostActionCreator())
+    },
+    onPostChange: (text) => {
+        debugger
+        dispatch(onPostChangeActionCreator(text))
+    }
+})
 
-                return <div>
-                    <ProfilePostForm
-                        addPost={addPost}
-                        onPostChange={onPostChange}
-                        newPostText={state.profilePage.newPostText}
-                    />
-                    <ProfilePosts
-                        postsData={state.profilePage.postsData}
-                    />
-                </div>
-            }
-        }
-        </StoreContext.Consumer>
-    )
-}
-
-export default ProfilePostsContainer;
+export const ProfilePostsFormContainer = connect(mapStateToPropsForm, mapDispatchToProps)(ProfilePostForm)
+export const ProfilePostsContainer = connect(mapStateToProps, {})(ProfilePosts)
