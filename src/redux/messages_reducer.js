@@ -1,7 +1,7 @@
 const ADD_MESSAGE = 'ADD-MESSAGE'
 const ON_MESSAGE_CHANGE = 'ON-MESSAGE-CHANGE'
 
-let initialState =  {
+let initialState = {
     massagesListData: [
         {
             id: 1,
@@ -48,6 +48,7 @@ let initialState =  {
     newMessageText: ''
 }
 
+
 const messagesReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_MESSAGE:
@@ -55,20 +56,26 @@ const messagesReducer = (state = initialState, action) => {
                 id: 4,
                 message: state.newMessageText
             }
-            state.newMessageText && state.messagesData.push(newMessage)
-            state.newMessageText = ''
-            return state
+            return {
+                ...state,
+                messagesData: [...state.messagesData, newMessage],
+                newMessageText: ''
+            }
 
         case ON_MESSAGE_CHANGE:
-            state.newMessageText = action.newText
-            return state
+            return {
+                ...state,
+                newMessageText: action.newText
+            }
 
         default:
             return state
     }
 }
 
-export const addMessageActionCreator = () => ({ type: ADD_MESSAGE })
+export const addMessageActionCreator = () => ({
+    type: ADD_MESSAGE
+})
 export const onMessageChangeActionCreator = (text) => ({
     type: ON_MESSAGE_CHANGE,
     newText: text

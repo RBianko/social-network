@@ -10,6 +10,7 @@ const Messages = (props) => {
         .map( messageItem =>
             <MessagesListItem
                 name={messageItem.name}
+                key={messageItem.id}
                 id={messageItem.id}
                 imgId={messageItem.imgId}
                 msgCount={messageItem.msgCount}

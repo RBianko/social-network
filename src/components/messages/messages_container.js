@@ -3,7 +3,7 @@ import Messages from "./messages";
 import {addMessageActionCreator, onMessageChangeActionCreator} from "../../redux/messages_reducer";
 import {connect} from "react-redux";
 
-let mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
     return {
         massagesListData: state.messagesPage.massagesListData,
         messagesData: state.messagesPage.messagesData,
@@ -11,7 +11,7 @@ let mapStateToProps = (state) => {
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         addMessage: () => {
             dispatch(addMessageActionCreator())
