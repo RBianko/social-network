@@ -1,5 +1,5 @@
 import {followAC, setCurrentPageAC, setTotalUsersCountAC, setUsersAC, unfollowAC} from "../../redux/users_reducer";
-import FriendList from "./friend_list";
+import FriendListAPIComponent from "./friend_list_api_component";
 import {connect} from "react-redux";
 
 const mapStateToProps = (state) => ({
@@ -26,4 +26,4 @@ const mapDispatchToProps = (dispatch) => ({
     }
 })
 
-export const FriendListContainer = connect(mapStateToProps,mapDispatchToProps)(FriendList)
+export const FriendListContainer = connect(mapStateToProps,mapDispatchToProps)(FriendListAPIComponent)

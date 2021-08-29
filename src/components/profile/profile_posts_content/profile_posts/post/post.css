@@ -30,6 +30,7 @@
 }
 
 .post__settings {
+    padding: 3px;
     margin-left: auto;
     position: relative;
     cursor: pointer;
@@ -46,7 +47,7 @@
 
 .post__settings__menu {
     right: 0;
-    top: 100%;
+    top: 10%;
     width: 200px;
     background-color: #fff;
     position: absolute;
