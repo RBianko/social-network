@@ -36,7 +36,6 @@ const Messages = (props) => {
                     addMessage={props.addMessage}
                     onMessageChange={props.onMessageChange}
                     newMessageText={props.newMessageText}
-
                     imgId={props.massagesListData[0].imgId}
                 />
             </div>

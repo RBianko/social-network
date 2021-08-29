@@ -16,7 +16,6 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(addPostActionCreator())
     },
     onPostChange: (text) => {
-        debugger
         dispatch(onPostChangeActionCreator(text))
     }
 })

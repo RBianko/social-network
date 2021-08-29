@@ -1,0 +1,76 @@
+.friend_list {
+    padding: 20px 20px 30px 20px;
+    margin-bottom: 0;
+}
+
+.friend_list__content {
+}
+
+.friend_list__title h2 {
+    text-transform: capitalize;
+    position: relative;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333333;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.friend_list__title h2:before {
+    bottom: -10px;
+    left: 0;
+    width: 30px;
+    height: 1px;
+    content: "";
+    position: absolute;
+    background-color: #dc4734;
+}
+
+.pages {
+    font-size: 16px;
+    display: flex;
+    padding: 20px 20px 10px 20px;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+    transition: all 0.3ms;
+}
+
+.page {
+    padding: 5px;
+    min-width: 30px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3ms;
+}
+.page:nth-child(9) {
+    margin-right: 20px;
+}
+.passive {
+    color: #a7a7a7;
+    background-color: #f8f8f8;
+}
+.passive.page:hover {
+    font-weight: normal;
+    line-height: normal;
+    color: #a7a7a7;
+    cursor: default;
+    box-shadow: 0 1px 15px 0 rgba(51, 51, 51, 0.2);
+}
+.selected.page:hover {
+    line-height: normal;
+    box-shadow: 0 4px 15px -4px rgba(255, 50, 50, .7);
+}
+
+.page:hover {
+    color: #dc4734;
+    box-shadow: 0 1px 15px 0 rgba(255, 50, 50, .7);
+}
+
+.selected {
+    font-weight: bold;
+    color: #dc4734;
+    box-shadow: 0 4px 15px -4px rgba(255, 50, 50, .7);
+}

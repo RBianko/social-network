@@ -5,6 +5,8 @@ import ProfileBanner from "./profile_banner/profile_banner";
 import SideBar from "../side_notifications/side_notifications";
 import ProfileFriends from "./profile_friends/profile_friends";
 import {ProfilePostsContainer, ProfilePostsFormContainer} from "./profile_posts_content/profile_post_container";
+import {FriendListContainer} from "../friend_list/friend_list_container";
+import {Route} from "react-router-dom";
 
 const Profile = () => {
     return (
@@ -16,8 +18,15 @@ const Profile = () => {
             </div>
             <div className="main__content">
                 {/*main__content*/}
-                <ProfilePostsFormContainer />
-                <ProfilePostsContainer />
+                <Route exact path='/home/friend_list' render={() =>
+                    <FriendListContainer />
+                }/>
+                <Route exact path='/home' render={() =>
+                    <div>
+                        <ProfilePostsFormContainer />
+                        <ProfilePostsContainer />
+                    </div>
+                }/>
             </div>
             <div className="right__content">
                 {/*right__content*/}

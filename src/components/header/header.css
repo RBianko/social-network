@@ -1,7 +1,6 @@
 .header {
     display: flex;
     justify-content: center;
-    height: 60px;
     background-color: #fff;
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
     margin-bottom: 25px;
@@ -13,9 +12,6 @@
     min-width: 1200px;
 }
 
-.menu {
-    display: block;
-}
 .menu ul {
     display: flex;
     list-style: none;
@@ -42,15 +38,20 @@
     color: #dc3545;
 }
 
+.logo {
+    position: absolute;
+    left: 46%;
+}
+
 .logo img {
     margin-top: -12px;
     width: 110px;
+    height: auto;
 }
 
 .search {
-    width: 350px;
     display: flex;
-    justify-content: flex-end;
+    justify-self: flex-end;
     align-items: center;
 }
 

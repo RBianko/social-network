@@ -4,17 +4,18 @@ import {NavLink} from "react-router-dom";
 
 const Header = () => {
     return (
-        <div className="header">
+        <header className="header">
             <div className="header__wrapper">
                 <nav className="menu">
                     <ul>
                         <li><NavLink to="/home">Home</NavLink></li>
                         <li><NavLink to="/messages">Messages</NavLink></li>
-                        <li><NavLink to="/notifications">Notifications</NavLink></li>
+                        <li><NavLink to="/home/friend_list">Friends</NavLink></li>
+                        <li><NavLink to="/home/notifications">Notifications</NavLink></li>
                     </ul>
                 </nav>
                 <div className="logo">
-                    <img src="https://i.pinimg.com/originals/dd/84/b8/dd84b8539d9c755540db2a1491790cec.png" alt='logo'/>
+                    <NavLink to="/home"><img src="https://i.pinimg.com/originals/dd/84/b8/dd84b8539d9c755540db2a1491790cec.png" alt='logo'/></NavLink>
                 </div>
                 <div className="search">
                     <form action="">
@@ -25,7 +26,7 @@ const Header = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 

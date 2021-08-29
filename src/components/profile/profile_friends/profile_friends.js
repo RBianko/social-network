@@ -1,11 +1,12 @@
 import React from "react";
 import './profile_friends.css';
+import {NavLink} from "react-router-dom";
 
 const ProfileFriends = () => {
     return (
         <div className="friends__banner card">
             <div className="side__bar-title">
-                <a href="">friend list</a>
+                <NavLink to="/home/friend_list">friend list</NavLink>
             </div>
             <div className="side__bar__content">
                 <ul className="side__bar__content-items">

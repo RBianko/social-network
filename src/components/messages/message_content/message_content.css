@@ -1,7 +1,7 @@
 .message__container {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 85px);
+    height: calc(100vh - 87px);
     max-width: 570px;
 }
 
